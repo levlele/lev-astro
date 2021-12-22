@@ -1,0 +1,30 @@
+---
+import Header from '../components/Header.astro';
+import Profile from '../components/Profile.astro';
+import Timeline from '../components/Timeline.astro';
+import Studies from '../components/Studies.astro';
+import Footer from '../components/Footer.astro';
+
+let title = 'LEV';
+---
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="max-w-[1440px] m-auto font-mono grid grid-cols-3">
+        <Header/>
+        <Profile/>
+        <Timeline/>
+        <Studies/>
+        <Footer/>
+    </div>
+</body>
+</html>
